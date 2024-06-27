@@ -3,13 +3,12 @@
 namespace Database\Factories;
 
 use App\Models\Employer;
-use App\Models\Job;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Job>
+ * @extends Factory<Employer>
  */
-class JobFactory extends Factory
+class EmployerFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,9 +18,7 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->jobTitle,
-            'salary' => fake()->numberBetween(50000, 100000),
-            'employer_id' => Employer::factory()
+            'name' => fake()->company(),
         ];
     }
 }
