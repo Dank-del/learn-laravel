@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(4)->create();
-        Job::factory(4)->create();
-        Employer::factory(4)->create();
+        User::factory(100)->create();
+        Job::factory(100)->create();
+        Employer::factory(100)->create();
     }
 }

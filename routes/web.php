@@ -3,7 +3,10 @@
 use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 
-Route::view("/", 'home')->name('home');
+Route::view("/", 'home', [
+    'greeting' => 'Hello',
+    'name' => 'Sayan Biswas'
+])->name('home');
 
 Route::view('/contact', 'contact')->name('contact');
 
